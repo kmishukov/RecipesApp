@@ -25,6 +25,7 @@ class MealTableViewCell: UITableViewCell {
     }
 
     private func setupViews() {
+        selectionStyle = .none
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
             $0.top.bottom.equalTo(contentView)
@@ -33,7 +34,8 @@ class MealTableViewCell: UITableViewCell {
 
         contentView.addSubview(mealImageView)
         mealImageView.snp.makeConstraints {
-            $0.size.equalTo(CGSize(width: 200, height: 200))
+            $0.size.equalTo(CGSize(width: 100, height: 100))
+            $0.left.greaterThanOrEqualTo(titleLabel.snp.right)
             $0.top.right.equalTo(contentView).inset(16)
             $0.bottom.equalTo(contentView).inset(16).priority(.medium)
         }
@@ -43,5 +45,6 @@ class MealTableViewCell: UITableViewCell {
 
     func updateWithModel(_ model: Meal) {
         titleLabel.text = model.name
+        mealImageView.kf.setImage(with: URL(string: model.imgUrl))
     }
 }

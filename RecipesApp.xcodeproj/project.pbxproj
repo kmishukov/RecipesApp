@@ -13,6 +13,7 @@
 		1D37E2912945C221000F201E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D37E2902945C221000F201E /* SnapKit */; };
 		1D8B4E7F2945D44B00921D44 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B4E7E2945D44B00921D44 /* Meals.swift */; };
 		1D8B4E822945D9D500921D44 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B4E812945D9D500921D44 /* MealTableViewCell.swift */; };
+		1D8B4E852945DC5D00921D44 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8B4E842945DC5D00921D44 /* Kingfisher */; };
 		1D8CEA7E2945BD4300329BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA7D2945BD4300329BD3 /* AppDelegate.swift */; };
 		1D8CEA802945BD4300329BD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA7F2945BD4300329BD3 /* SceneDelegate.swift */; };
 		1D8CEA822945BD4300329BD3 /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA812945BD4300329BD3 /* RecipesListViewController.swift */; };
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8B4E852945DC5D00921D44 /* Kingfisher in Frameworks */,
 				1D37E2912945C221000F201E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +150,7 @@
 			name = RecipesApp;
 			packageProductDependencies = (
 				1D37E2902945C221000F201E /* SnapKit */,
+				1D8B4E842945DC5D00921D44 /* Kingfisher */,
 			);
 			productName = RecipesApp;
 			productReference = 1D8CEA7A2945BD4300329BD3 /* RecipesApp.app */;
@@ -179,6 +182,7 @@
 			mainGroup = 1D8CEA712945BD4200329BD3;
 			packageReferences = (
 				1D37E28F2945C221000F201E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1D8B4E832945DC5D00921D44 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 1D8CEA7B2945BD4300329BD3 /* Products */;
 			projectDirPath = "";
@@ -454,6 +458,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		1D8B4E832945DC5D00921D44 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -461,6 +473,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1D37E28F2945C221000F201E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		1D8B4E842945DC5D00921D44 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D8B4E832945DC5D00921D44 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

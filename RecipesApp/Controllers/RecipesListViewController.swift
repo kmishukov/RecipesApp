@@ -24,15 +24,15 @@ class RecipesListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupViews()
-
         viewModel.loadData { [weak self] in
             self?.tableView.reloadData()
         }
     }
 
     private func setupViews() {
+        view.backgroundColor = .white
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MealTableViewCell.self, forCellReuseIdentifier: MealTableViewCell.cellIdentifier)
         view.addSubview(tableView)
@@ -40,7 +40,6 @@ class RecipesListViewController: UIViewController {
             $0.edges.equalTo(view)
         }
     }
-
 }
 
 // MARK: - UITableViewDatasource
