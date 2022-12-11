@@ -14,6 +14,10 @@
 		1D8B4E7F2945D44B00921D44 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B4E7E2945D44B00921D44 /* Meals.swift */; };
 		1D8B4E822945D9D500921D44 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B4E812945D9D500921D44 /* MealTableViewCell.swift */; };
 		1D8B4E852945DC5D00921D44 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8B4E842945DC5D00921D44 /* Kingfisher */; };
+		1D8B4E892945DED500921D44 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B4E882945DED500921D44 /* RecipeDetailViewController.swift */; };
+		1D8B4E8C2945E00000921D44 /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B4E8B2945E00000921D44 /* RecipeDetailViewModel.swift */; };
+		1D8B4E8E2945E02700921D44 /* RecipeDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B4E8D2945E02700921D44 /* RecipeDetailViewModelImpl.swift */; };
+		1D8B4E922945E81700921D44 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B4E912945E81700921D44 /* MealDetail.swift */; };
 		1D8CEA7E2945BD4300329BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA7D2945BD4300329BD3 /* AppDelegate.swift */; };
 		1D8CEA802945BD4300329BD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA7F2945BD4300329BD3 /* SceneDelegate.swift */; };
 		1D8CEA822945BD4300329BD3 /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA812945BD4300329BD3 /* RecipesListViewController.swift */; };
@@ -27,6 +31,10 @@
 		1D37E28D2945C09B000F201E /* RecipesListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewModelImpl.swift; sourceTree = "<group>"; };
 		1D8B4E7E2945D44B00921D44 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		1D8B4E812945D9D500921D44 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		1D8B4E882945DED500921D44 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		1D8B4E8B2945E00000921D44 /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
+		1D8B4E8D2945E02700921D44 /* RecipeDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModelImpl.swift; sourceTree = "<group>"; };
+		1D8B4E912945E81700921D44 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		1D8CEA7A2945BD4300329BD3 /* RecipesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8CEA7D2945BD4300329BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8CEA7F2945BD4300329BD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +90,44 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1D8B4E862945DEB500921D44 /* RecipesList */ = {
+			isa = PBXGroup;
+			children = (
+				1D8B4E802945D9BF00921D44 /* Views */,
+				1D8B4E7D2945D43400921D44 /* Models */,
+				1D37E28A2945C045000F201E /* ViewModel */,
+				1D8CEA812945BD4300329BD3 /* RecipesListViewController.swift */,
+			);
+			path = RecipesList;
+			sourceTree = "<group>";
+		};
+		1D8B4E872945DEBD00921D44 /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1D8B4E902945E80E00921D44 /* Model */,
+				1D8B4E8A2945DFF600921D44 /* ViewModel */,
+				1D8B4E882945DED500921D44 /* RecipeDetailViewController.swift */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
+		1D8B4E8A2945DFF600921D44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D8B4E8B2945E00000921D44 /* RecipeDetailViewModel.swift */,
+				1D8B4E8D2945E02700921D44 /* RecipeDetailViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D8B4E902945E80E00921D44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D8B4E912945E81700921D44 /* MealDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1D8CEA712945BD4200329BD3 = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +169,8 @@
 		1D8CEA932945BEF700329BD3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D8B4E802945D9BF00921D44 /* Views */,
-				1D8B4E7D2945D43400921D44 /* Models */,
-				1D37E28A2945C045000F201E /* ViewModel */,
-				1D8CEA812945BD4300329BD3 /* RecipesListViewController.swift */,
+				1D8B4E872945DEBD00921D44 /* RecipeDetail */,
+				1D8B4E862945DEB500921D44 /* RecipesList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,11 +276,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D37E2892945C022000F201E /* APIManager.swift in Sources */,
+				1D8B4E892945DED500921D44 /* RecipeDetailViewController.swift in Sources */,
 				1D8CEA822945BD4300329BD3 /* RecipesListViewController.swift in Sources */,
+				1D8B4E8E2945E02700921D44 /* RecipeDetailViewModelImpl.swift in Sources */,
+				1D8B4E8C2945E00000921D44 /* RecipeDetailViewModel.swift in Sources */,
 				1D37E28E2945C09B000F201E /* RecipesListViewModelImpl.swift in Sources */,
 				1D37E28C2945C051000F201E /* RecipesListViewModel.swift in Sources */,
 				1D8B4E822945D9D500921D44 /* MealTableViewCell.swift in Sources */,
 				1D8CEA7E2945BD4300329BD3 /* AppDelegate.swift in Sources */,
+				1D8B4E922945E81700921D44 /* MealDetail.swift in Sources */,
 				1D8B4E7F2945D44B00921D44 /* Meals.swift in Sources */,
 				1D8CEA802945BD4300329BD3 /* SceneDelegate.swift in Sources */,
 			);

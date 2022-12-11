@@ -61,6 +61,9 @@ extension RecipesListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension RecipesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("DidSelect: \(indexPath.row)")
+        let model = viewModel.meals[indexPath.row]
+        let vm = RecipeDetailViewModelImpl(mealID: model.id)
+        let vc = RecipeDetailViewController(viewModel: vm)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -17,7 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController = RecipesListViewController(viewModel: viewModel)
         viewController.title = "Canadian Meals 🇨🇦"
         let navigationController = UINavigationController(rootViewController: viewController)
+        configureNavigationController(navigationController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+
+    private func configureNavigationController(_ navigationController: UINavigationController) {
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithDefaultBackground()
+        navigationController.navigationBar.standardAppearance = navigationBarAppearance
+        navigationController.navigationBar.compactAppearance = navigationBarAppearance
+        navigationController.navigationBar.scrollEdgeAppearance = navigationBarAppearance
     }
 }
