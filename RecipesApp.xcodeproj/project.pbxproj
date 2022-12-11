@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D8CEA7E2945BD4300329BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA7D2945BD4300329BD3 /* AppDelegate.swift */; };
 		1D8CEA802945BD4300329BD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA7F2945BD4300329BD3 /* SceneDelegate.swift */; };
-		1D8CEA822945BD4300329BD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA812945BD4300329BD3 /* ViewController.swift */; };
+		1D8CEA822945BD4300329BD3 /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CEA812945BD4300329BD3 /* RecipesListViewController.swift */; };
 		1D8CEA872945BD4300329BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CEA862945BD4300329BD3 /* Assets.xcassets */; };
 		1D8CEA8A2945BD4300329BD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CEA882945BD4300329BD3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		1D8CEA7A2945BD4300329BD3 /* RecipesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8CEA7D2945BD4300329BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8CEA7F2945BD4300329BD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1D8CEA812945BD4300329BD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D8CEA812945BD4300329BD3 /* RecipesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewController.swift; sourceTree = "<group>"; };
 		1D8CEA862945BD4300329BD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D8CEA892945BD4300329BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D8CEA8B2945BD4300329BD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +54,30 @@
 		1D8CEA7C2945BD4300329BD3 /* RecipesApp */ = {
 			isa = PBXGroup;
 			children = (
-				1D8CEA7D2945BD4300329BD3 /* AppDelegate.swift */,
-				1D8CEA812945BD4300329BD3 /* ViewController.swift */,
-				1D8CEA7F2945BD4300329BD3 /* SceneDelegate.swift */,
-				1D8CEA862945BD4300329BD3 /* Assets.xcassets */,
-				1D8CEA882945BD4300329BD3 /* LaunchScreen.storyboard */,
-				1D8CEA8B2945BD4300329BD3 /* Info.plist */,
+				1D8CEA932945BEF700329BD3 /* Controllers */,
+				1D8CEA922945BEBC00329BD3 /* Supporting files */,
 			);
 			path = RecipesApp;
+			sourceTree = "<group>";
+		};
+		1D8CEA922945BEBC00329BD3 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CEA8B2945BD4300329BD3 /* Info.plist */,
+				1D8CEA862945BD4300329BD3 /* Assets.xcassets */,
+				1D8CEA7D2945BD4300329BD3 /* AppDelegate.swift */,
+				1D8CEA7F2945BD4300329BD3 /* SceneDelegate.swift */,
+				1D8CEA882945BD4300329BD3 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		1D8CEA932945BEF700329BD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CEA812945BD4300329BD3 /* RecipesListViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D8CEA822945BD4300329BD3 /* ViewController.swift in Sources */,
+				1D8CEA822945BD4300329BD3 /* RecipesListViewController.swift in Sources */,
 				1D8CEA7E2945BD4300329BD3 /* AppDelegate.swift in Sources */,
 				1D8CEA802945BD4300329BD3 /* SceneDelegate.swift in Sources */,
 			);
@@ -299,7 +315,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9N9MQ3U2TY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RecipesApp/Info.plist;
+				INFOPLIST_FILE = "RecipesApp/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -327,7 +343,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9N9MQ3U2TY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RecipesApp/Info.plist;
+				INFOPLIST_FILE = "RecipesApp/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
