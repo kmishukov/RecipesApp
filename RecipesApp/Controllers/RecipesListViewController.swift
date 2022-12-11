@@ -34,7 +34,7 @@ class RecipesListViewController: UIViewController {
 
     private func setupViews() {
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MealTableViewCell.self, forCellReuseIdentifier: MealTableViewCell.cellIdentifier)
         view.addSubview(tableView)
         tableView.snp.makeConstraints {
             $0.edges.equalTo(view)
@@ -52,9 +52,9 @@ extension RecipesListViewController: UITableViewDataSource {
         viewModel.meals.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: MealTableViewCell.cellIdentifier, for: indexPath)
         let model = viewModel.meals[indexPath.row]
-        cell.textLabel?.text = model.name
+        (cell as? MealTableViewCell)?.updateWithModel(model)
         return cell
     }
 }
@@ -62,6 +62,6 @@ extension RecipesListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension RecipesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print("DidSelect: \(indexPath.row)")
     }
 }
