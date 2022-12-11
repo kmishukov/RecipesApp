@@ -12,7 +12,8 @@ class RecipeDetailViewController: UIViewController {
     private let labelsBackgroundView = UIView(frame: .zero)
     private let titleLabel = UILabel(frame: .zero)
     private let difficultyLabel = UILabel(frame: .zero)
-    private let instructionContainer = UIScrollView(frame: .zero)
+    private let scrollView = UIScrollView(frame: .zero)
+    private let instructionsContainer = UIStackView(frame: .zero)
     private let instructionsLabel = UILabel(frame: .zero)
 
     let viewModel: RecipeDetailViewModel
@@ -72,20 +73,23 @@ class RecipeDetailViewController: UIViewController {
             $0.right.equalTo(labelsBackgroundView).inset(16)
         }
 
-        view.addSubview(instructionContainer)
-        instructionContainer.snp.makeConstraints {
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
             $0.top.equalTo(mealImageView.snp.bottom).offset(5)
             $0.left.right.equalTo(view)
             $0.bottom.equalTo(view)
         }
 
-        instructionsLabel.numberOfLines = 0
-        instructionsLabel.textAlignment = .justified
-        instructionContainer.addSubview(instructionsLabel)
-        instructionsLabel.snp.makeConstraints {
-            $0.top.equalTo(instructionContainer.snp.bottom).offset(5)
+        instructionsContainer.axis = .vertical
+        scrollView.addSubview(instructionsContainer)
+        instructionsContainer.snp.makeConstraints {
+            $0.top.bottom.equalTo(scrollView)
             $0.left.right.equalTo(view).inset(16)
         }
+
+        instructionsLabel.numberOfLines = 0
+        instructionsLabel.textAlignment = .justified
+        instructionsContainer.addArrangedSubview(instructionsLabel)
     }
 
     private func updateViews() {
