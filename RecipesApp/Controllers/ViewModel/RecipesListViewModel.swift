@@ -8,5 +8,6 @@
 import Foundation
 
 protocol RecipesListViewModel {
-    func loadData()
+    var meals: [Meal] { get }
+    func loadData(completion: @escaping () -> Void)
 }
